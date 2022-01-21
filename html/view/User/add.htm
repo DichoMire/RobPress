@@ -1,0 +1,24 @@
+
+<div class="well" style="width: 60%; margin: auto; padding: auto">
+<h2>Register</h2>
+<p>Please provide a username, password and email address to register</p>
+
+<?
+	$form = new Form(); 
+	echo $form->start($csrf);
+	echo $form->add('username', array('required' => ''));
+	echo $form->add('displayname',array('label' => 'Display Name', 'required' => ''));
+	echo $form->add('email');
+	echo '<hr/>';
+	echo $form->add('password',array('type' => 'password','value' => ''));
+	echo '<p>Password must be between 8 to 64 characters.</p>';
+	echo $form->add('password2',array('type' => 'password','value' => '', 'label' => 'Confirm Password'));
+	echo '<hr/>';
+	echo $form->add('Register',array('type' => 'submit'));
+	echo $form->end();
+?>
+
+<hr/>
+<p>Already have an account? Just <a href="<?=$site['base']?>/user/login">Login</a>
+
+</div>

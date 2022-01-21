@@ -1,0 +1,373 @@
+commit 5defb3d64b195ef1c562109b31bea4d93b6e3fb8
+Author: root <root@localhost.localdomain>
+Date:   Wed Jan 12 10:33:37 2022 -0500
+
+    Added CSRF protection to all GET requests that perform an action.
+
+commit 587a3359fdd75d60de0c6b9f5010fbdb8f027cfd
+Author: root <root@localhost.localdomain>
+Date:   Wed Jan 12 10:08:02 2022 -0500
+
+    Begun adding CSRF protection on GET request
+
+commit 8f6d6455ec591d08d5c564cbfbe879aedf9cc1a2
+Author: root <root@localhost.localdomain>
+Date:   Wed Jan 12 09:20:20 2022 -0500
+
+    Every single form is working with CSRF tokenization. 100% guarantee.
+
+commit 8c422307e2c844471ba08fc027e7052364be474e
+Author: root <root@localhost.localdomain>
+Date:   Wed Jan 12 09:12:26 2022 -0500
+
+    Minor-fix: CSRF errors in /admin. Also misc fixes to the whole application.
+
+commit bc608fdc9e9378ebff558cf90c4765962705b093
+Author: root <root@localhost.localdomain>
+Date:   Wed Jan 12 09:06:16 2022 -0500
+
+    Removing CSRF restriction durring DEBUG MOde
+
+commit 72e8884155da544267fcdb7c5d3127e89daada52
+Merge: 48d0431 fd64b12
+Author: root <root@localhost.localdomain>
+Date:   Wed Jan 12 08:52:40 2022 -0500
+
+    Merge branch 'master' of robpress.ecs.soton.ac.uk:./public_html
+
+commit 48d0431cc1bda57c21ae0d6d7ff2681d907e4a7b
+Author: root <root@localhost.localdomain>
+Date:   Wed Jan 12 08:51:55 2022 -0500
+
+    Disabled the ability for a regular user to use blog/moderate.
+
+commit fd64b12fecececca7a68f97a8905ad70f494ac09
+Author: root <root@localhost.localdomain>
+Date:   Wed Jan 12 08:50:29 2022 -0500
+
+    Added CSRF protection when editing pages through the admin
+
+commit 0e5ff5b5e07c167260d45fa3f8fdc8d8cac8af73
+Author: root <root@localhost.localdomain>
+Date:   Wed Jan 12 08:36:49 2022 -0500
+
+    Added the ability to go to admin regardless of user level when in Debug Mode.
+
+commit a085cf85b2a81f8310dcdb1abf40258a39dc9770
+Author: root <root@localhost.localdomain>
+Date:   Wed Jan 12 08:34:11 2022 -0500
+
+    Added a check to see if user has admin level before entering /admin
+
+commit 1931a90c61f87739ed053f9c53bb37169281bbd5
+Author: root <root@localhost.localdomain>
+Date:   Wed Jan 12 08:21:59 2022 -0500
+
+    Added file upload checks for file extension and Mime type.
+
+commit 5db357018dba9563e5c83199874affd58c1d27e6
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 22:13:42 2022 -0500
+
+    Added CSRF simple functionality in all forms of the application. Self test fails a couple of tests. TODO: debug.
+
+commit 3119e137c89c363ed313d175781d6219c389189a
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 21:20:14 2022 -0500
+
+    Major-fix: Fixed all forms to work with new CSRF protection not in admin.
+
+commit 5b6ce0b3b85d6f53de18efd4c2cc1451780821cb
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 21:00:21 2022 -0500
+
+    Working CSRF protectiong. Bugless. With timestamp verification.
+
+commit 42289a51e0b0aa15a9948fb85467a2312fd04632
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 19:53:31 2022 -0500
+
+    Completed basic CSRF protection on blog/comment without time handling.
+
+commit e2ce0caadb923470c5f95aca850d6460798ac263
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 19:31:47 2022 -0500
+
+    Progress on CSRF. Added validation for blog/comment. Made a general function to validate in AuthHelper.
+
+commit 141c199faed5f52319739fcdbb4b87183006735a
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 19:02:14 2022 -0500
+
+    Started implementing CSRF functionality in the blog/view form.
+
+commit 4bab88cedf1b0412ddfe84e6787f714d70bc5fa5
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 18:34:27 2022 -0500
+
+    Added a return to generateCSRFToken
+
+commit 755da50c1c4f7062c07fa9889861781bdc4d1505
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 18:14:19 2022 -0500
+
+    Added expiration date to CSRF tokens.
+
+commit 35ed57b61e41827e399d1508242bc0f0f7579c51
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 17:59:25 2022 -0500
+
+    Added table for the CSRF tokens. Added function to generate a csrf token for a user. Added a Class that handles the csrf connection to DB.
+
+commit fa5e6988e5c732eba849ed3a4ce825eafa504909
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 14:29:04 2022 -0500
+
+    Minor-fix: reverting back  a hash_password() to password in the debugLogin
+
+commit bfa0d76b4ebfc12f88469ae88595de175ad539c3
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 12:40:38 2022 -0500
+
+    Minor-fix: Fixed an error where a user couldn't upload an avatar due to data exfiltration change.
+
+commit 5703ab074887f00be597c45b0501759795b40128
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 12:21:43 2022 -0500
+
+    Moved the hashing algorithm to usermodel.php. Changed all password setting to utilize this function.
+
+commit 51b13c1b700b35820e9f696d7ba927e32261505a
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 12:09:30 2022 -0500
+
+    Changed login function to work with the hashing algorithm. Adapted SQL accordingly.
+
+commit 1ec6b72c5c0b3c767328ab3f57340d9af550d4dd
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 11:25:05 2022 -0500
+
+    Changed admin and test accoutn's password in the initial SQL. Implemented the hashing algorithm in register.
+
+commit 504310e69bd5b09126bb0ab89f5fc9fc3a55ffe8
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 10:48:58 2022 -0500
+
+    Revert "Added initial salting functionality to test the system out."
+    Removing the custom salting function and using password_hash() instead which has its own salting.
+    This reverts commit 306ca99c9115677c6263a13419e2e0e2ab3c386f.
+
+commit 5baddbd23d2dce4162e7c9a6f79f34ac8c2c35cf
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 10:47:16 2022 -0500
+
+    Revert "Revert "Hides the password from profile editing. Fixed password length checking.""
+    Oli I don't know how revert works pls no hate
+    This reverts commit 168b3a860903a5f7042b3214aabca92b2c32fc01.
+
+commit 168b3a860903a5f7042b3214aabca92b2c32fc01
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 10:43:23 2022 -0500
+
+    Revert "Hides the password from profile editing. Fixed password length checking."
+    Decided to use password_hash() which handles salting itself.
+    This reverts commit 1a18cf3552d2f9407dfbbb5234180cbf6d62059d.
+
+commit 306ca99c9115677c6263a13419e2e0e2ab3c386f
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 10:21:58 2022 -0500
+
+    Added initial salting functionality to test the system out.
+
+commit 1a18cf3552d2f9407dfbbb5234180cbf6d62059d
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 09:50:53 2022 -0500
+
+    Hides the password from profile editing. Fixed password length checking.
+
+commit c533021f87c448f92a693045db00def250042340
+Author: root <root@localhost.localdomain>
+Date:   Tue Jan 11 09:35:10 2022 -0500
+
+    Replaced vulnerable copyfrom() extraction of data in the comment function with custom one.
+
+commit b57527d916ec40919d6fab4aabe6363ecd8d16dc
+Merge: 68c9fef 017bdc1
+Author: root <root@localhost.localdomain>
+Date:   Mon Jan 10 09:36:01 2022 -0500
+
+    Merge branch 'master' of robpress.ecs.soton.ac.uk:./public_html
+
+commit 68c9fefe9f5fcb1c071403bc6a501a84c0c772ae
+Author: root <root@localhost.localdomain>
+Date:   Mon Jan 10 09:34:33 2022 -0500
+
+    Minor-fix: Added an extra check in the edit function to enable user to keep his old username
+
+commit 017bdc1b38ff36707861eccabaedeecba21578f9
+Author: root <root@localhost.localdomain>
+Date:   Mon Jan 10 08:18:35 2022 -0500
+
+    Pollished and rearranged .htaccess
+
+commit 35aa23f7adab3632fb596342405321e2f37a0e43
+Author: root <root@localhost.localdomain>
+Date:   Sun Jan 9 09:54:07 2022 -0500
+
+    Fixed the .htaccess whitelist to include HTML CSS JS and two image extensions.
+
+commit acd5c0589f353f6cf17a68c1ccfd66755e068391
+Author: root <root@localhost.localdomain>
+Date:   Sun Jan 9 09:47:20 2022 -0500
+
+    Adding validation on the admin/user/edit form - No username duplication and password length validation.
+
+commit ea8d78e569906a3f68b77f9acdb0db0786b0d04a
+Author: root <root@localhost.localdomain>
+Date:   Sun Jan 9 09:46:12 2022 -0500
+
+    Fixing a parameter manipulation in the admin/user/edit form.
+
+commit 51cb1527a3c9b71ce08361b0f38356938d60f841
+Author: root <root@localhost.localdomain>
+Date:   Sun Jan 9 09:32:40 2022 -0500
+
+    Minor-fix: Edited a typo in the user edit profile function.
+
+commit 3695890d288b74e6f6df7605f248e5fe2bea456c
+Author: root <root@localhost.localdomain>
+Date:   Sun Jan 9 09:31:29 2022 -0500
+
+    Added password length validation in edit user profile screen.
+
+commit ea798dfe6597b09ad9f530c2029775ebe79284f1
+Author: root <root@localhost.localdomain>
+Date:   Sun Jan 9 09:26:58 2022 -0500
+
+    Added email validation to the registration form.
+
+commit 0daf81920f0bf505f45f3c6024223834e669fa77
+Author: root <root@localhost.localdomain>
+Date:   Sun Jan 9 09:12:46 2022 -0500
+
+    Added a password length requirement to the registration form.
+
+commit ef44094d2bcad26f5704f5744364569de3cb9123
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 16:56:08 2022 -0500
+
+    Added an exception for /# in the htaccess since it is required for the user dropdown menu.
+
+commit e260a5799d3faccdae661f51c9d95c721e254e6b
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 16:45:23 2022 -0500
+
+    Added functionality for administrators to see the stack trace.
+
+commit 8150ff7e988f12c3fd38ee8e6814305e9591e692
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 16:32:52 2022 -0500
+
+    Included access to two files in the .htaccess required to pass the SelfTest. Introduced the custom error handling.
+
+commit c3cfc7a3478b51af736173edb925077b9688de54
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 16:14:21 2022 -0500
+
+    Added comment to the .htaccess to clarify which part of the code was added
+
+commit f53028fe9affaab8ffa914d14cc3b8d657482488
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 16:13:03 2022 -0500
+
+    Touched up the .htaccess file to prevent serving of internal files and directories
+
+commit 2bc0212fe4bfca66caa256d62fcd08a3745f15b0
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 16:00:41 2022 -0500
+
+    Added initial error screen when not in Debug mode to avoid internal information vulnerability. TODO: add administrator functionality.
+
+commit 65a53d4fe03831a24413827240afe9bcc6661e08
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 15:34:30 2022 -0500
+
+    Reverted to old use of extract() form earlier commit. Still avoiding copyfrom().
+
+commit e593eda3e427bf4520e3bbb625e09af38946d253
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 15:10:13 2022 -0500
+
+    Replaced copyfrom() in the admin/blog/edit form to avoid parameter manipulation.
+
+commit 75e235ecfac54a3c433050bc9f058969bc96de9a
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 14:35:07 2022 -0500
+
+    Replaced extract() when taking data from edit profile form with a better approach.
+
+commit 2a95ef5208414882861211175e30f638e51e4269
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 14:05:39 2022 -0500
+
+    Minor-fix: Fixing another commenting mistake due to editor file coloring
+
+commit a65419996f3382b7207dcdabc69542b9e1ced638
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 12:33:01 2022 -0500
+
+    Minor-fix: Wrong comment type due to incorrect editor code coloring.
+
+commit c7cd9a6c00a18fea69c884c08b2f6d3380103fe8
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 12:20:03 2022 -0500
+
+    Removing the to field in the contact POST form to avoid parameter manipulation.
+
+commit c7e23651b5728fdc088bdf6aa29fc59d05d35ef0
+Author: root <root@localhost.localdomain>
+Date:   Sat Jan 8 12:13:35 2022 -0500
+
+    Fixed Parameter manipulation for the user_id field in the leave comment POST form.
+
+commit f9f8601ca6e3c5161a2310ca68085e48b4d4dddc
+Author: root <root@localhost.localdomain>
+Date:   Fri Jan 7 10:51:48 2022 -0500
+
+    Added XSS protection in blog.php (line 115) - escaping output
+
+commit f2b34d35eeaca3ac2e7f6ad05e2c6bdb7c33deee
+Author: root <root@localhost.localdomain>
+Date:   Fri Jan 7 10:17:16 2022 -0500
+
+    fixed a typo
+
+commit 8142f57f2490b55cb17b1c9bb28feeb540320dbc
+Author: root <root@localhost.localdomain>
+Date:   Fri Jan 7 10:07:52 2022 -0500
+
+    Added sanitization helper class
+
+commit f9831af316dadd2fb25f72aa90e073f54d0fc849
+Author: root <root@localhost.localdomain>
+Date:   Thu Jan 6 15:23:40 2022 -0500
+
+    Added a testing.php file to add testing functionality.
+
+commit f3c94431a27e3b7aed41d071dae3a6069daebf03
+Author: root <root@localhost.localdomain>
+Date:   Thu Jan 6 14:34:27 2022 -0500
+
+    Added SQL Injection prevention on the search page.
+
+commit c78b0ddfa7a11b582705e9a08dc9464c63805868
+Author: root <root@localhost.localdomain>
+Date:   Thu Jan 6 13:08:07 2022 -0500
+
+    Added SQL injection prevention to login page using parameterized queries.
+
+commit c107acc16c7a6c60db5af668bc43c144ada30f80
+Author: root <root@srv03189.soton.ac.uk>
+Date:   Wed Dec 22 00:25:20 2021 +0000
+
+    Initial Commit
