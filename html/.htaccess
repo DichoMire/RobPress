@@ -1,0 +1,29 @@
+# Enable rewrite engine and route requests to framework
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+RewriteRule ^(.*)$ - [E=BASE:%1]
+
+RewriteCond %{REQUEST_URI} \.ini$
+RewriteRule \.ini$ - [R=404]
+
+#Disallow serving of sensitive files, allow only necessary files
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} !.css$
+RewriteCond %{REQUEST_URI} !.js$
+RewriteCond %{REQUEST_URI} !.jpg$
+RewriteCond %{REQUEST_URI} !.png$
+RewriteCond %{REQUEST_URI} !index.php$
+#Personally we would forbid these two files from being accessed, but they are required for the SelfTest
+RewriteCond %{REQUEST_URI} !initialise.php$
+RewriteCond %{REQUEST_URI} !debug.php$
+RewriteRule ^ %{ENV:BASE}/controllers/errorer.php
+
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* %{ENV:BASE}/index.php [L,QSA]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+
+#Disable directory broswing
+Options All -Indexes
